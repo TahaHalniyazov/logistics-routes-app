@@ -1,0 +1,32 @@
+[
+  {
+    "id": 5021,
+    "sender_city": "Москва",
+    "receiver_city": "Казань",
+    "pickup": { "lat": 55.7512, "lng": 37.6184 },
+    "delivery": { "lat": 55.7887, "lng": 49.1221 },
+    "status": "Новый",
+    "date": "2024-04-11",
+    "weight": 15
+  },
+  {
+    "id": 5022,
+    "sender_city": "Санкт-Петербург",
+    "receiver_city": "Нижний Новгород",
+    "pickup": { "lat": 59.9386, "lng": 30.3141 },
+    "delivery": { "lat": 56.2965, "lng": 43.9361 },
+    "status": "В пути",
+    "date": "2024-04-12",
+    "weight": 8
+  },
+  {
+    "id": 5023,
+    "sender_city": "Екатеринбург",
+    "receiver_city": "Пермь",
+    "pickup": { "lat": 56.8389, "lng": 60.6057 },
+    "delivery": { "lat": 58.0105, "lng": 56.2502 },
+    "status": "Доставлен",
+    "date": "2024-04-10",
+    "weight": 25
+  }
+]
