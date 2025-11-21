@@ -1,5 +1,33 @@
-# Vue 3 + TypeScript + Vite
+# Logistics Routes — SPA для управления логистическими маршрутами
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Одностраничное приложение на Vue 3 + TypeScript для работы с заказами и логистическими маршрутами.  
+Реализованы загрузка заказов, таблица с фильтрами, карта с маркерами и маршрутом, модалка редактирования и тост-уведомления.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+
+## Технологии
+
+- **Vue 3** (`<script setup>`, TypeScript)
+- **Pinia** — глобальное состояние (заказы, фильтры, модалка, тосты)
+- **Axios** — загрузка заказов из `/mock/orders.json`
+- **MapLibre GL** — карта, маркеры и линия маршрута
+- **FSD (Feature-Sliced Design)** — архитектура проекта
+- Адаптивная верстка в стиле iOS (карточки, bottom sheet на мобиле)
+
+## Структура проекта (FSD)
+
+```txt
+src/
+  app/           # Корневое приложение: App.vue, провайдеры, глобальные стили
+  shared/        # Переиспользуемые UI и утилиты (тосты, базовые компоненты)
+  entities/
+    order/       # Сущность "заказ": типы, API, Pinia-стор
+  features/
+    order-filters/  # Фильтрация заказов (статус, дата, город)
+    order-edit/     # Редактирование заказа (модалка + логика)
+  widgets/
+    orders-table/   # Виджет таблицы заказов + фильтры
+    orders-map/     # Виджет карты с маркерами и маршрутом
+  pages/
+    orders/         # Страница OrdersPage (композиция виджетов)
+mock/
+  orders.json       # Мок-данные заказов (как в ТЗ)
